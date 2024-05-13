@@ -6,7 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-axum = "0.7.5"
+axum = { version = "0.7.5", features = ["ws"] }
+futures = "0.3"
+futures-util = { version = "0.3", default-features = false, features = ["sink", "std"] }
+include_dir = "0.7.3"
 markdown = "1.0.0-alpha.17"
+minijinja = "2.0.1"
+notify = "6.1.1"
 tokio = { version = "1.37.0", features = ["full"] }
 
